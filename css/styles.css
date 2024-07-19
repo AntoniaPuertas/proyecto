@@ -181,3 +181,42 @@ section  {
 }
 
 
+.container-input {
+    margin-bottom: 1rem;
+}
+
+.container-input label {
+    color: var(--white);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-align: left;
+}
+
+.container-input input,
+.container-input textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: .5px solid var(--secundary);
+}
+
+.enviar {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    /* aplica grid 1 fila con dos columnas y dos filas con 1 columna */
+    .inputs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto;
+        column-gap: 1rem;
+    }
+}
+
+.container-input:nth-child(3),
+.container-input:nth-child(4)
+{
+    grid-column: 1/3;
+} 
