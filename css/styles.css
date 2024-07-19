@@ -1,6 +1,6 @@
 :root {
     --white: #ffffff;
-    --dark:#222121;
+    --dark:#534c4c;
     --primary: #00B341;
     --secundary: #DE9100;
     --secundaryLight: #dfd4c0;
@@ -124,9 +124,60 @@ header h1 span {
 
 section  {
     text-align: center;
-    color: #00B341;
 }
 
 .contenedor-servicios {
     display: flex;
+    flex-direction: column;   
 }
+
+@media (min-width: 768px){
+    .contenedor-servicios{
+        flex-direction: row;
+    }
+}
+
+.section-servicios {
+    margin: 1rem;
+}
+
+.section-servicios h3 {
+    color: var(--primary);
+}
+
+.icono {
+    height: 7rem;
+    width: 7rem;
+    background-color: var(--secundary);
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.section-servicios p {
+    line-height: 2;
+}
+
+/* formulario */
+
+.formulario {
+    background-color: var(--dark);
+    /* width mínimo de 80rem o 100% */
+    width: min(80rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    margin: 0 auto 2rem auto;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--secundary);
+}
+
+
