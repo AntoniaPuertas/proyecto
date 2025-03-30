@@ -20,6 +20,7 @@ html {
 /************************************************************************/
 
 /* Hace que el contenedor mida lo que se especifica en el width y en el height */
+/* Sin esta propiedad el contenedor mide width + padding + border */
 
 * {
     box-sizing: border-box;
@@ -71,7 +72,7 @@ p {
 
 /* 
     @media query para modificar reglas:
-    Se aplican las reglas quel hay dentro de la media query
+    Se aplican las reglas que hay dentro de la media query
     si la ventana del navegador mide un mínimo de 480px
     */
 @media (min-width: 480px) {
@@ -104,11 +105,9 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
-    position: relative;
 }
 
 .section-banner{
-    position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
@@ -174,6 +173,7 @@ p {
     padding: 1rem;
     border-radius: var(--radio-borde);
     margin-top: 1rem;
+    text-align: center;
 }
 
 /* media query
@@ -193,12 +193,7 @@ p {
 }
 
 .shadow-small {
-    box-shadow: 4px 4px 8px 0px rgba(194,194,194,0.7);
-}
-
-/* centra todos los textos que haya dentro de las etiquetas section */
-section  {
-    text-align: center;
+    box-shadow: 1px 1px 8px 0px rgba(194,194,194,0.4);
 }
 
 /* esta clase envuelve tres secciones dentro
@@ -207,6 +202,7 @@ section  {
 .contenedor-servicios {
     display: flex;
     flex-direction: column;   
+    gap: 10px;
 }
 
 /* media query para pantallas con un mínimo de 768px
@@ -219,7 +215,7 @@ section  {
 }
 
 .section-servicios {
-    margin: 1rem;
+    flex: 1;
 }
 
 .section-servicios h3 {
